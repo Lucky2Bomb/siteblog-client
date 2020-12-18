@@ -1,0 +1,22 @@
+@import "./flex-container.scss";
+@import "./variables.scss";
+
+@import "../components/Utils/Loader/Loader.scss";
+@import "../components/Utils/Input/Input.scss";
+
+@import "../App.scss";
+@import "../components/Navbar/Navbar.scss";
+
+@import "../components/Authorization/Authorization.scss";
+
+@import "../components/Main/Main.scss";
+@import "../components/Main/PostList/PostList.scss";
+@import "../components/Main/PostList/Post/Post.scss";
+@import "../components/Main/PageList/PageList.scss";
+
+@import "../components/Profile/Profile.scss";
+
+@import "../components/PostDetails/PostDetails.scss";
+@import "../components/PostDetails/CommentList/CommentList.scss";
+
+@import "../components/PostDetails/CommentList/Comment/Comment.scss";

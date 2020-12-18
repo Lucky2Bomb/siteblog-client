@@ -1,0 +1,58 @@
+.form-authorization {
+    box-sizing: border-box;
+    max-width: 100vw;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    padding: 25px;
+    box-shadow: 10px 10px 1px rgba(0, 0, 0, 0.25);
+
+    &__header {
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &__input {
+        font-size: 16px;
+        width: 400px;
+        max-width: 80vw;
+        border: none;
+        border-bottom: 2px solid #aaaaaa;
+        margin: 5px 0;
+        padding: 5px;
+
+        &:focus {
+            outline: none;
+            border-bottom: 2px solid #ff0000;
+        }
+    }
+
+    &__button-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        margin: 10px 0 0 0;
+    }
+
+    &__button {
+        border: 2px solid $button-ok_background-color;
+        background-color: $button-ok_background-color;
+        color: #ffffff;
+        padding: 8px 16px;
+        font-size: 16px;
+
+        &:focus {
+            outline: none;
+            border: 2px solid darken($button-ok_background-color, 30);
+        }
+
+        &:hover {
+            background-color: lighten($button-ok_background-color, 10);
+        }
+
+        &:active {
+            background-color: darken($button-ok_background-color, 10);
+        }
+    }
+}

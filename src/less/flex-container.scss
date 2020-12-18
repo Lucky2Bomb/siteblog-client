@@ -1,0 +1,46 @@
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+
+    &__to-left {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: center;
+    }
+
+    &__to-right {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    &__vertical-center {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.container {
+    &__fill-space {
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+        &__center-center {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__button-ok {
+        color: red;
+        font-size: 16px;
+        padding: 10px 5px;
+        margin: 5px 10px;
+    }
+}

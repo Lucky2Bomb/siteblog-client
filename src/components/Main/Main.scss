@@ -1,0 +1,12 @@
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.main {
+    width: $laptop-content-width;
+    text-align: justify;
+}
