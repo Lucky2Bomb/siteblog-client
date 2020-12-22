@@ -4,11 +4,15 @@ import thunk from "redux-thunk";
 import postReducer from "./postReducer";
 import userReducer from "./userReducer";
 import appReducer from './appReducer';
+import universityReducer from './universityReducer';
+import usersReducer from './usersReducer';
 
 const rootReducer = combineReducers({
     user: userReducer,
+    users: usersReducer,
     post: postReducer,
-    app: appReducer
+    app: appReducer,
+    university: universityReducer
 });
 
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));

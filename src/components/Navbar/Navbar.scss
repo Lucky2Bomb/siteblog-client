@@ -16,6 +16,14 @@
         text-decoration: none;
     }
 
+    &__about {
+        margin: 0 20px;
+        text-decoration: none;
+        color: white;
+        display: flex;
+        align-items: center;
+    }
+
     &__registration, &__login {
         color: #ffffff;
         padding: 5px;
@@ -28,7 +36,7 @@
         }
     }
 
-    $user-menu-width: 140px;
+    $user-menu-width: 160px;
 
     &__user-menu {
         height: 100%;
@@ -58,6 +66,7 @@
 
         & img {
             object-fit: cover;
+            background-color: #fff;
             width: 100%;
             height: 100%;
         }
@@ -72,13 +81,14 @@
         flex-direction: column;
         top: $navbar-height;
         width: $user-menu-width;
-        & a {
+        &-item {
             text-align: center;
             padding: 10px;
             text-decoration: none;
             color: #ffffff;
             &:hover {
                 background-color: darken($navbar-color, 15);
+                cursor: pointer;
             }
         }
     }

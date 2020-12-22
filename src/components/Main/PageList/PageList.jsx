@@ -1,13 +1,9 @@
-import React, { useState }from 'react';
+import React from 'react';
 import '../../../less/style.scss';
-import { useSelector, useDispatch } from 'react-redux';
-import { setCurrentPage } from './../../../reducers/postReducer';
+import { useDispatch } from 'react-redux';
 
-const PageList = () => {
+const PageList = ({currentPage, pages, setCurrentPage }) => {
     const dispatch = useDispatch();
-
-    const currentPage = useSelector(state => state.post.currentPage);
-    const pages = useSelector(state => state.post.pages);
 
     let pagesList = [];
 
@@ -17,14 +13,14 @@ const PageList = () => {
 
     for(let i = 1; i <= pages; i++) {
         if (i === currentPage) {
-            pagesList.push(<span key={i} onClick={() => goPageHandler(i)} style={{fontWeight: "700"}}>{i}</span>)
+            pagesList.push(<span key={i} onClick={() => goPageHandler(i)} className="pages-list__item active">{i}</span>)
         } else {
-            pagesList.push(<span key={i} onClick={() => goPageHandler(i)}>{i}</span>)
+            pagesList.push(<span key={i} onClick={() => goPageHandler(i)} className="pages-list__item">{i}</span>)
         }
     }
 
     return (
-        <div>
+        <div className="pages-list">
             {pagesList}
         </div>
     )

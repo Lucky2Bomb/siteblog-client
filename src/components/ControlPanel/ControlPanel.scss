@@ -1,0 +1,50 @@
+$control-panel-padding: 120px 10px;
+
+.control-panel {
+    display: grid;
+    grid-template-areas: "menu field";
+    grid-template-columns: 250px auto;
+
+    &__title {
+        grid-area: title;
+        font-size: 40px;
+    }
+
+    &__menu {
+        grid-area: menu;
+        background-color: #fff;
+        height: calc(100vh - 60px);
+        padding: $control-panel-padding;
+        padding-left: 0;
+        padding-right: 0;
+        box-sizing: border-box;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        &-item {
+            padding: 10px 0;
+            font-size: $font-size;
+            text-decoration: none;
+            color: $font-color;
+            transition: 0.2s;
+            &:hover {
+                background-color: lighten($font-color, 30);
+                color: #ffffff;
+            }
+        }
+
+        &-item.active {
+            text-decoration: none;
+            color: #000000;
+            background-color: $font-color;
+            color: #ffffff;
+        }
+    }
+
+    &__field {
+        font-size: $font-size;
+        grid-area: field;
+        padding: $control-panel-padding;
+        box-sizing: border-box;
+    }
+}

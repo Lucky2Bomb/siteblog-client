@@ -4,17 +4,13 @@ import { NavLink } from 'react-router-dom';
 import "../../less/style.scss";
 import { useDispatch } from 'react-redux';
 import { logout } from './../../reducers/userReducer';
+import NavbarMenu from './NavbarMenu';
+import userIcon from "../../assets/svg/user.svg";
 
 const Navbar = () => {
     const isAuth = useSelector(state => state.user.isAuth);
-    const dispatch = useDispatch();
-
-    function logoutHandler() {
-        dispatch(logout());
-    }
 
     const user = useSelector(state => state.user.currentUser);
-    console.log(user);
 
     return (
         <div className="navbar-wrapper">
@@ -24,22 +20,11 @@ const Navbar = () => {
                 </div>
                 <div className="flex-container__to-right">
                     {isAuth && <>
-                        <NavLink to="/profile" className="navbar__user-menu">
-                            <div className="navbar__avatar">
-                                <img src={user.avatarUrl} alt="" srcSet=""/>
-                            </div>
-                            <div className="navbar__user-menu__name">
-                                профиль
-                            </div>
-                            <div className="navbar__dropdown">
-                                <a href="#">Профиль</a>
-                                <a href="#">Админка</a>
-                                <a href="#">Выход</a>
-                            </div>
-                        </NavLink>
-                        <div onClick={() => logoutHandler()} className="navbar__registration">выход</div>
+                        <NavLink to="/about" className="navbar__about" >О нас</NavLink>
+                        <NavbarMenu avatarUrl={user.avatarUrl === "-" || user.avatarUrl === "" ? userIcon : user.avatarUrl} />
                     </>}
                     {!isAuth && <>
+                        <NavLink to="/about" className="navbar__about" >О нас</NavLink>
                         <NavLink to="/login" className="navbar__registration">войти</NavLink>
                         <NavLink to="/registration" className="navbar__login">регистрация</NavLink>
                     </>}

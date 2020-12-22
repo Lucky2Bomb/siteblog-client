@@ -1,0 +1,13 @@
+.faculty-item {
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 3fr 3fr 1fr;
+    padding: 10px;
+    border-bottom: 1px solid $font-color;
+
+    &__name, &__university {
+        &.header {
+            font-weight: bold;
+        }
+    }
+}

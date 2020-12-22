@@ -7,6 +7,7 @@
 }
 
 .post-details {
+    margin-top: 10px;
     width: $laptop-content-width;
     text-align: justify;
 
@@ -21,9 +22,25 @@
             height: 100%;
         }
     }
+
     &__post {
         padding-bottom: 10px;
         margin-bottom: 10px;
         border-bottom: 2px solid $font-color;
+    }
+}
+#upload__image {
+    display: none;
+}
+
+.comment-text {
+    border: 1px solid $font-color;
+
+    &__textarea {
+        width: 100%;
+        font-size: 16px;
+        font-family: $font-family;
+        resize: none;
+        height: 120px;
     }
 }

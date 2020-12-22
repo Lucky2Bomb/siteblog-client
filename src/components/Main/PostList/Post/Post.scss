@@ -1,4 +1,51 @@
 .post {
+    background-color: #fff;
+    padding: 20px;
+    margin:  10px 0 20px 0;
+    box-shadow: 10px 10px 1px rgba(0, 0, 0, 0.35);
+    &:hover &__delete {
+        display: block;
+    }
+
+    & h2 {
+        margin: 0;
+        padding: 5px 0 10px 0;
+    }
+
+    &__text {
+        text-indent: 20px;
+    }
+
+    &__more-details {
+        margin-left: 5px;
+    }
+
+    &__user-date {
+        margin: 10px 0 5px 0;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__user {
+
+    }
+
+    &__delete {
+        font-size: 16px;
+        display: none;
+        color: blue;
+        padding: 0 10px;
+        &:hover {
+            color: red;
+            cursor: pointer;
+        }
+    }
+
+    &__date {
+        padding: 0 10px;
+        color: $font-color;
+    }
+
     &__image {
         width: 100%;
         height: auto;

@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import Post from './Post/Post';
 
-const PostList = () => {
+const PostList = ({userRole}) => {
     const posts = useSelector(state => state.post.posts).map(post =>
         <Post
             key={post._id}
@@ -10,6 +10,7 @@ const PostList = () => {
             title={post.title}
             text={post.text}
             user={post.user}
+            currentUserRole={userRole}
             dateCreated={post.dateCreated}
             image={post.fileName}
         />);

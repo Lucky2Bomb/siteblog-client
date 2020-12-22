@@ -2,7 +2,8 @@ import React from 'react';
 import Comment from './Comment/Comment';
 
 const CommentList = (props) => {
-    const comments = props.comments.map(comment => <Comment data={comment}/>)
+    //isModerOrAdmin
+    const comments = props.comments.map(comment => <Comment data={comment} isDelete={props.isModer || props.isAdmin}/>)
     return (
         <div>
         {comments}

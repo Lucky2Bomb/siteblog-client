@@ -1,0 +1,39 @@
+.user-item {
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 10px;
+    border-bottom: 1px solid $font-color;
+
+    &__initials {
+    }
+
+    &__email {
+    }
+
+    &__position {
+        // grid-column: 3;
+        // grid-row: 1;
+    }
+
+    &__position:hover &__position-select {
+        display: inline-block;
+    }
+
+    &__position-select {
+        z-index: 4;
+        position: absolute;
+        width: 100%;
+        display: none;
+    }
+
+    &__roles {}
+
+    &__delete {}
+
+    &__initials, &__email, &__position, &__roles, &__delete {
+        &.header {
+            font-weight: bold;
+        }
+    }
+}
